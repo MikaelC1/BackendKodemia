@@ -14,20 +14,25 @@ function names() {
     return nombres;
 }
 
-function repetidos(names) {
-    const repetidos = {};
+function repetidos(nombres) {
+    const repetidos = [];
     let cantidadRepetidos = 0
 
-    for (let nombre of names) {
-        if (repetidos[nombre]) {
+    nombres.forEach(element => {
+        if (repetidos[element]) {
             cantidadRepetidos ++
         }
-        repetidos[nombre] = true;
-    }
+        repetidos[element] = true;
+    })
+
     if (cantidadRepetidos !== 0){
+        
         console.log('Tienes ', cantidadRepetidos, ' nombres repetidos')
+    } else {
+        console.log('No tienes repetidos')
     }
-    return console.log('No tienes repetidos')
+    
+    return 
 }
 
 function list(nombres) {
