@@ -8,6 +8,8 @@ function names() {
         names = prompt('Ingresa un nombre, cuando quieras parar, escribe NO: ');
         if (names === 'NO') {
             break;
+        } else if(names === "") {
+            console.error('Por favor ingresa un valor valido')
         }
         nombres.push(names.trim());
     }
