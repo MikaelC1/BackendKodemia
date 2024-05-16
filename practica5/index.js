@@ -42,15 +42,12 @@ function list(nombres) {
 
     let largo = nombres[0];
     let corto = nombres[0];
-    let cantidadLetras = 0;
 
     nombres.forEach(element => {
-        cantidadLetras += element.length;
-
-        if (element.length > largo.length) {
+        if (element.length >= largo.length) {
             largo = element;
         }
-        if (element.length < corto.length) {
+        if (element.length <= corto.length) {
             corto = element;
         }
     });
