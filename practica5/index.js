@@ -19,6 +19,7 @@ function names() {
 function repetidos(nombres) {
     const repetidos = [];
     let cantidadRepetidos = 0
+    
 
     nombres.forEach(element => {
         if (repetidos[element]) {
@@ -28,17 +29,15 @@ function repetidos(nombres) {
     })
 
     if (cantidadRepetidos !== 0){
-        
         console.log('Tienes ', cantidadRepetidos, ' nombres repetidos')
     } else {
         console.log('No tienes repetidos')
     }
     
-    return 
+    return
 }
 
 function list(nombres) {
-    
 
     let largo = nombres[0];
     let corto = nombres[0];
@@ -58,6 +57,7 @@ function list(nombres) {
     console.log('El nombre mas corto es: ', corto);
     repetidos(nombres)
 }
+
 const nombres = names();
 list(nombres);
 
