@@ -30,7 +30,7 @@ server.get('/koders', (req, res) => {
 
 server.post('/koders', (req, res) => {
     try {
-        const newKoder = request.body
+        const newKoder = req.body
         const koders = kodersUseCase.add(newKoder)
         
         res.json({
@@ -61,7 +61,7 @@ server.delete('/koders', (req, res) =>{
 
 server.delete('/koders/:name', (req, res) => {
     try{
-        const name = request.params.name
+        const name = req.params.name
         const koders = kodersUseCase.deleteByName(name)
 
         res.json({
